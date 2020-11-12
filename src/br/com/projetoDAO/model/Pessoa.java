@@ -17,8 +17,13 @@ public class Pessoa {
 
     public Pessoa(String nome, String profissao) {
         
+        this.id = id;
         this.nome = nome;
         this.profissao = profissao;
+    }
+
+    public Pessoa(int i, String leila, String arquiteto) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     

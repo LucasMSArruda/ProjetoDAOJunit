@@ -21,13 +21,12 @@ public class PessoaDAOTest {
        
     Pessoa p;    
     Pessoa p2;
+    Pessoa p3;
     
     public PessoaDAOTest() {
         p = new Pessoa("Sandra", "Teacher");  
         p2 = new Pessoa ("Teste", "Testes"); 
     }
-
-    
     
     @BeforeClass
     public static void setUpClass() {
@@ -94,8 +93,12 @@ public class PessoaDAOTest {
     public void testAtualizar() {
         System.out.println("atualizar");
         PessoaDAO pd = new PessoaDAO();
-        p.setId(3);
-        assertTrue(pd.atualizar(p2)); 
+        p.setId(3);               
+        p.setNome("Tester");
+        p.setProfissao("Testador");
+        pd.atualizar(p);
+        //p3 = new Pessoa("TESTADOR", "TESTADO");
+        assertTrue(pd.atualizar(p)); 
     }
 
     /**
